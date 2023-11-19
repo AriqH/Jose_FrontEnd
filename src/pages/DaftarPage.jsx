@@ -15,7 +15,7 @@ const DaftarPage = () => {
   const Register = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://jose-back-end.vercel.app/users", {
+      await axios.post("http://198.167.141.89:5001/users", {
         name: name,
         email: email,
         password: password,

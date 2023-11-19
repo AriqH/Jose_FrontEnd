@@ -38,7 +38,7 @@ const ReservasiPage = () => {
 
     try {
       const response = await axios.post(
-        "https://jose-back-end.vercel.app/reservation",
+        "http://198.167.141.89:5001/reservation",
         {
           name,
           date,
