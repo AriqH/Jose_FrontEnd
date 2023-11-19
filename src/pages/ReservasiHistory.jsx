@@ -12,7 +12,7 @@ const ReservationHistory = () => {
     }
 
     axios
-      .get("http://localhost:5001/reservation", {
+      .get("https://jose-back-end.vercel.app/reservation", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

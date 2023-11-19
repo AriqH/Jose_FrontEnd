@@ -37,14 +37,17 @@ const ReservasiPage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5001/reservation", {
-        name,
-        date,
-        email,
-        jenisHewan,
-        whatsapp,
-        tujuan,
-      });
+      const response = await axios.post(
+        "https://jose-back-end.vercel.app/reservation",
+        {
+          name,
+          date,
+          email,
+          jenisHewan,
+          whatsapp,
+          tujuan,
+        }
+      );
 
       // history.push("/reservation-list");
       navigate("/reservation-history");

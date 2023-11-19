@@ -16,7 +16,7 @@ const LoginPage = () => {
   const Auth = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5001/login", {
+      const res = await axios.post("https://jose-back-end.vercel.app/login", {
         email: email,
         password: password,
       });

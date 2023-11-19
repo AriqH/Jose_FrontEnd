@@ -26,7 +26,7 @@ class SymptomChecker extends Component {
 
     // Kirim permintaan ke API Chat GPT untuk analisis gejala
     axios
-      .post("http://localhost:5001/chat", {
+      .post("https://jose-back-end.vercel.app/chat", {
         prompt: `jenis hewan ${this.state.jenisPet}, gejala ${this.state.gejala}, deskripsi ${this.state.deskripsi}`,
       })
       .then((response) => {
