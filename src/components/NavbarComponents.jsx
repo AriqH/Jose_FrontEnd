@@ -6,11 +6,12 @@ import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 
 const NavbarComponents = () => {
-  const { accessToken, role, logout } = useAuth(); // Ambil accessToken dan logout dari konteks
+  const { accessToken, role, logout } = useAuth();
 
   const handleLogout = () => {
     logout();
   };
+
   const [changeColor, setChangeColor] = useState(false);
 
   const changeBackgroundColor = () => {
@@ -25,15 +26,25 @@ const NavbarComponents = () => {
     changeBackgroundColor();
 
     window.addEventListener("scroll", changeBackgroundColor);
-  });
+
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundColor);
+    };
+  }, []); // Perubahan terjadi saat komponen dipasang dan dilepas
 
   return (
     <div>
-      <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
+      <Navbar
+        expand="lg"
+        collapseOnSelect // Tambahkan properti collapseOnSelect untuk responsivitas pada perangkat mobile
+        className={changeColor ? "color-active" : ""}
+      >
         <Container>
           <Navbar.Brand href="#home" className="fs-3 fw-bold">
             Jose Vet
           </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
+          {/* Toggle untuk perangkat mobile */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto text-center">
               {navLinks.map((link) => {
