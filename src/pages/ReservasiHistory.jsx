@@ -12,7 +12,7 @@ const ReservationHistory = () => {
     }
 
     axios
-      .get("https://198.167.141.89:5001/reservation", {
+      .get("http://198.167.141.89:5001/reservation", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

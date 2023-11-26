@@ -38,7 +38,7 @@ const ReservasiPage = () => {
 
     try {
       const response = await axios.post(
-        "https://198.167.141.89:5001/reservation",
+        "http://198.167.141.89:5001/reservation",
         {
           name,
           date,
