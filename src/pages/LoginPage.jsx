@@ -16,7 +16,7 @@ const LoginPage = () => {
   const Auth = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://198.167.141.89:5001/login", {
+      const res = await axios.post("https://198.167.141.89:5001/login", {
         email: email,
         password: password,
       });
