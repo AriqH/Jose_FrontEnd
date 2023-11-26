@@ -25,7 +25,6 @@
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     z-index: 9999;
-    background-color: rgb(119, 217, 119);
 }
 
 .navbar.color-active {
@@ -270,7 +269,7 @@ header {
 
 
 .doctor-page .doctor  img {
-    width: 100%;
+    width: 50%;
 }
 /* doctor */
 /* Testimonial */
