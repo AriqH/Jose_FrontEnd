@@ -18,7 +18,6 @@ const FooterComponents = () => {
             <div className="email">
               <Link className="text-decoration-none">
                 <i className="fa-regular fa-envelope"></i>
-                <p className="m-0">person@gmail.com</p>
               </Link>
             </div>
           </Col>
